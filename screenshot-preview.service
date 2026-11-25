@@ -1,0 +1,15 @@
+[Unit]
+Description=Show Save As for GNOME screenshots on request
+After=graphical-session-pre.target gnome-session-initialized.target
+PartOf=graphical-session.target
+
+[Service]
+Type=dbus
+BusName=io.github.theayushlab.ScreenshotPreview
+ExecStart=/usr/bin/python3 %h/.local/share/screenshot-preview/preview.py
+TimeoutStartSec=10s
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=graphical-session.target

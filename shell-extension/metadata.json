@@ -1,0 +1,7 @@
+{
+  "uuid": "screenshot-save@theayushlab.github.io",
+  "name": "Screenshot Save Shortcut",
+  "description": "Open Save As with Ctrl+S from the GNOME screenshot selector.",
+  "shell-version": ["50"],
+  "version": 1
+}
